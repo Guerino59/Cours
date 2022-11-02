@@ -1,0 +1,65 @@
+h1{
+    color: red;
+}
+// @for $i from 1 through 4{
+//   .col-#{$i} {
+//     width: (100% / 4) * $i;
+//   }
+// }
+div{
+    background-color: red;
+    height: 20px;
+}
+@mixin colw($nbcol) {
+  @for $i from 1 through $nbcol{
+    .col-#{$i}{
+      width: (100% / $nbcol) * $i;
+    }
+  }
+}
+@include colw(4);
+
+$fruits: "banane", "cerise", "ananas", "pomme";
+
+@each $fruit in $fruits {
+  .fruit-#{$fruit} {
+    width: 50%;
+  }
+}
+
+@mixin listWidth($prefix, $list){
+  @each $element in $list {
+    .#{$prefix}-#{$element} {
+      width: 50%;
+      background-color: aquamarine;
+    }
+  }
+}
+$animaux: "chat", "chien", "chevre", "rat";
+@include listWidth('animal',$animaux);
+
+@function firstOfList($list){
+  @return nth($list, 1);
+}
+.fruit::before{
+  content: firstOfList($fruits);
+}
+@function lastOfList($list){
+  @return nth($list, length($list));
+}
+.fruit::before{
+  content: lastOfList($animaux);
+}
+
+$villes: (lyon,"Lyon"), 
+         (paris,"Paris"), 
+         (marseille,"Marseille"), 
+         (rouen,"Rouen"), 
+         (bourg-de-peage,"Bourg de Péage");
+         
+@each $ville in $villes {
+  .ville-#{nth($ville,1)}::before{
+    display: block;
+    content: "#{nth($ville,2)}";
+  }
+}

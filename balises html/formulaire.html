@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Balise contenat tout notre formulaire l'actio indique vers quel page envoyer les donées la method indique commet transfere les donneés 
+        "get" affichera les donnes dans l'url 
+        "Post" cachera les donnes dans la requete -->
+    <form action="" method="post">
+        <!-- le label permet de faire un texte cliquable qui placera le focus sur l'input dont l'id correspond au for du label -->
+        <label for="prenom">Choisir un prénom :</label>
+        <input type="text" name="prenom" id="prenom" required autofocus>
+        <!-- required force à remplir le champ pour valider le formulaire
+             autofocus place le focus sur le champ au chargement de la page -->
+        <input type="text" name="nom" placeholder="Nom de famille">   
+        <hr> 
+        <label for="Birthday">Date de naissance :</label>
+        <!-- Permet de selectionner une date dans le calendrier -->
+        <input type="date" id="Birthday" name="Birthday"> 
+        <hr>
+        <!-- Permet de selectionner la couleur -->
+        <label for="color">Couleur favorite :</label>
+        <input type="color" name="color "id="color">
+        <hr>
+        <label for="email" name="email">E-mail :</label>
+        <input type="email" name="email "id="email">
+        <hr>
+        <label for="pass">Mot de passe :</label>
+        <br>
+        <input type="password" id="pass" name="pass">
+        <hr>
+        <label for="cv">Votre Cv :</label>
+        <input type="file" id="cv" name="cv">
+        <hr>
+        <label for="comm">Commentaire :</label>
+        <br>
+        <textarea name="comm" id="comm" cols="30" rows="10"></textarea>
+        <hr>
+        <fieldset>
+            <legend>Choisi ton langage préféré :</legend>
+            <input type="radio" name="language" id="html" value="HTML">
+            <label for="html">HTML</label>
+            <br>
+            <input type="radio" name="language" id="CSS" value="CSS">
+            <label for="CSS">CSS</label>
+            <br>
+            <input type="radio" name="language" id="JS" value="JavaScript">
+            <label for="JS">JavaScript</label>
+        </fieldset>
+        <hr>
+        <fieldset>
+            <legend>Quelle catégorie appreciez vous ?</legend>
+            <input type="checkbox" name="aventure" id="aventure" checked>
+            <label for="aventure">Aventure</label>
+            <input type="checkbox" name="horreur" id="horreur">
+            <label for="horreur">Horreur</label>
+            <input type="checkbox" name="dramatique" id="dramatique">
+            <label for="dramatique">Dramatique</label>
+        </fieldset>
+        <hr>
+        <label for="repas">Choisis ton repas :</label>
+        <select name="repas" id="repas" multiple disabled>
+            <option value="pizza">Pizza</option>
+            <option value="pâtes">Pâtes</option>
+            <option value="burger">Burger</option>
+            <option value="poulet">Poulet</option>
+        </select>
+        <input type="submit" value="Envoyer">
+        <input type="button" value="Like">
+        <button>Appuie</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,96 @@
+@charset "UTF-8";
+h1 {
+  color: red;
+}
+
+div {
+  background-color: red;
+  height: 20px;
+}
+
+.col-1 {
+  width: 25%;
+}
+
+.col-2 {
+  width: 50%;
+}
+
+.col-3 {
+  width: 75%;
+}
+
+.col-4 {
+  width: 100%;
+}
+
+.fruit-banane {
+  width: 50%;
+}
+
+.fruit-cerise {
+  width: 50%;
+}
+
+.fruit-ananas {
+  width: 50%;
+}
+
+.fruit-pomme {
+  width: 50%;
+}
+
+.animal-chat {
+  width: 50%;
+  background-color: aquamarine;
+}
+
+.animal-chien {
+  width: 50%;
+  background-color: aquamarine;
+}
+
+.animal-chevre {
+  width: 50%;
+  background-color: aquamarine;
+}
+
+.animal-rat {
+  width: 50%;
+  background-color: aquamarine;
+}
+
+.fruit::before {
+  content: "banane";
+}
+
+.fruit::before {
+  content: "rat";
+}
+
+.ville-lyon::before {
+  display: block;
+  content: "Lyon";
+}
+
+.ville-paris::before {
+  display: block;
+  content: "Paris";
+}
+
+.ville-marseille::before {
+  display: block;
+  content: "Marseille";
+}
+
+.ville-rouen::before {
+  display: block;
+  content: "Rouen";
+}
+
+.ville-bourg-de-peage::before {
+  display: block;
+  content: "Bourg de Péage";
+}
+
+/*# sourceMappingURL=style.css.map */

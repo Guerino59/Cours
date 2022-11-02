@@ -1,0 +1,99 @@
+*, ::after, ::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: goldenrod;
+}
+
+main{
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows:repeat(5, 1fr) ;
+    justify-content: space-evenly;
+    /* grid-template-areas: 
+    "1 1 1 2"
+    "1 1 1 3"
+    "4 4 4 4"
+    "5 6 6 6"
+    "5 7 8 9"; */
+}
+h1{
+    text-align: center;
+}
+div{
+    background-color: brown;
+    margin: 10px;
+}
+.div1{
+    grid-column: 1/ 4;
+    grid-row: 1/ 3
+    /* grid-area: 1; */
+}
+
+.div4{
+grid-column: 1/5;
+    /* grid-area: 4; */
+}
+.div5{
+    grid-row: 4/6;
+}
+.div6{
+    grid-column: 2/5;
+    /* grid-area: 6; */
+}
+
+@media screen and (max-width: 960px) {
+    main{
+        min-height: 100vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(10, 1fr);
+    }
+    .div1{
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+    .div2{
+        grid-column: 2/2;
+        grid-row: 1/3;
+    }
+    .div3{
+        grid-column: 1/2;
+        grid-row: 3/5;
+    }
+    .div4{
+        grid-column: 2/2;
+        grid-row: 3/5;
+    }
+    .div5{
+        grid-column: 1/2;
+        grid-row: 5/7;
+    }
+    .div6{
+        grid-column: 2/2;
+        grid-row: 5/7;
+    }
+    .div7{
+        grid-column: 1/2;
+        grid-row: 7/9;
+    }
+    .div8{
+        grid-column: 2/2;
+        grid-row: 7/9;
+    }
+    .div9{
+        grid-column: 1/2;
+        grid-row: 9/11;
+    }
+    
+    
+}
+@media screen and (max-width: 600px) {
+    main{
+        display: block;
+    }
+    div{
+        height: 200px;
+    }
+    
+}

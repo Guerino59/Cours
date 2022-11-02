@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- Indiaction au navigateur q'uil va lire un fichier de type HTML -->
+<html lang="fr">
+    <!-- Tous le code HTML se trouvera entre les balises HTML -->
+    <head>
+        <!-- la balise meta prend different attributq lui donnant different rôles.
+        Ici charset permet d'indiquer l'encodage utilisé pour les characteres. -->
+        <meta charset="UTF-8">
+        <!-- Gère la comptabilité entre navigateur. -->
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <!-- Permet d'adapter la taille de la page à celle de l'appareil -->
+        <meta name="viewport" content="width=device-width, initiale-scale=1.0">
+        <!-- Indique l'auteur de la page -->
+        <meta name="author" content="LOUIS GUERIN">
+        <!-- Indique la description de la page, cette balise peut eêtre lu par les robots des moteurs de recherche pour l'afficher dans les resultats (Référencement) -->
+        <meta name="description" content="Une page avec les bases HTML">
+        <!-- Mots clé aidant au référencement -->
+        <meta name="keywords" content="html, head, balises, meta, tag">
+        <!-- Titre qui s'affiche sur l'onglet ou dans les favoris -->
+        <title>Ma première page</title>
+        <!-- icone onglet -->
+        <link rel="shortcut icon" href="" type="image/x-icon">
+    </head>
+    <!-- La balise contiendra tout le corps de notre page ce qui sera visible par l'utilistateur dans le viewport -->
+    <body>
+        <!-- Balise de type block sans effet particulier -->
+        <header>
+            <!-- Balise de type block sans effet particulier -->
+            <nav>
+                <!-- Balise block qui crée une liste non ordonnée -->
+                <ul>
+                    <!-- Balise block représentant un élément de la liste -->
+                    <li>
+                        <a href="./tableau.html">Les tableaux en HTML</a>
+                        <!-- Création du prmeier lien -->
+                    </li>
+                    <li>
+                        <!-- L'attribut target permet de changer la façon dont le lien s'ouvre, ici _blank permet d'ouvrir le lien dans un nouvel onglet-->
+                        <a href="https://www.google.com/search?client=firefox-b-d&q=bonjour" target="_blank">bonjour</a>
+                        
+                    </li>
+                </ul>
+                <!-- Balise block liste ordonée -->
+                <ol>
+                    <!-- les liens commençant par # -->
+                    <li><a href="#video">Vidéo</a></li>
+                    <li><a href="#footer">Footer</a></li>
+                </ol>
+            </nav>
+        </header>
+        <!-- Balise block sans effet -->
+        <main>
+            <!-- Les balises "h" sont des titres allant de 1 à 6 -->
+            <h1>Titre !</h1>
+            <!-- Une section est un type block qui devrait contenir un titre -->
+            <section>
+                <h2>Titre Section !</h2>
+            
+            <article>
+                <h3>Titre Article !</h3>
+                <!-- Une balise de type block ne pouvant contenir que des balises inline -->
+                <p>
+                    <!-- Balise inline qui met en gras -->
+                    <strong> ipsum dolor sit amet </strong>
+                    consectetur adipisicing elit. Voluptas nesciunt eaque veniam voluptatem, praesentium<!-- Saut à la ligne --><br> nihil est dicta delectus<!-- Souligner --> <u>fugiat provident!</u>
+                </p>
+                <!-- Création d'une ligne séparatrice -->
+                <hr>
+                <p>
+                    <!-- Balise inline mettant en italique et indiquant que c'est un texte important -->
+                    <em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, enim ipsa tempore est, fugiat quibusdam reprehenderit,</em>
+                    <!-- Balise inline mettant en italique et indiquent que le texte est une citation -->
+                     <i>id unde quos corrupti voluptatem vitae. Eos enim iste, at odio reprehenderit optio corporis?</i>
+                </p>
+                <p>
+                    <!-- Permet la creation d'une infobulle pour indiquer la signification d'une abréviation -->
+                    Aimez vous le <abbr title="HyperText Markup Language">HTML</abbr>?
+                </p>
+                <p>
+                    <!-- Block inline affichant une image ou si elle ne fonction pas, le "alt" -->
+                    <img src="images.jpg" alt="Icone">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis inventore accusantium quaerat cum rem reiciendis quia. Consequatur, provident sint consectetur, expedita quae ipsam odit, minus nostrum nemo dolorum officia libero.
+                </p>
+            </article>
+        </section>
+        <section id="video">
+            <h2>Audio et Video</h2>
+            <!-- La balise video peut prendre plusieurs attribut :
+            src pour indiquer la source de la video
+            controls pour afficher les boutons
+            loop pour jouer la video en boucle
+            muted pour couper le son par défaut
+            autoplay pour lancer automatiquement la video
+            poster pour mettre une image de présenation à la vidéo 
+            il peut prendre également une "height" et une "width"-->
+            <video src="video.mp4" controls loop muted autoplay poster="images.jpg" height="500"></video>
+            <audio src=""></audio>
+        </section>
+        </main>
+        <footer id="footer" class="superDiv classe2 grosseClasse">
+            <!-- La balise iframe permet d'integrer une page dans une autre page -->
+            <iframe src="./formulaire.html" frameborder="2"></iframe>
+            <!-- Balise de type block sans effet -->
+            <div>
+                <!-- Balise inline de type san effet -->
+                <span></span>
+            </div>
+            <!-- Balise de type block san effet -->
+            <code></code>
+            <!-- balise de type block qui garde la mise en page -->
+            <pre>
+                  bonjour
+                       Tous
+                Le monde
+
+            </pre>
+        </footer>
+    </body>
+</html>

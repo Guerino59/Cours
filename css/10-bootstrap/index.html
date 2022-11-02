@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../10-bootstrap/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../10-bootstrap/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <title>Bootstrap</title>
+</head>
+<body class="bg-secondary">
+    <!-- Bootstrap permet de creer la structure de base d'un site de façon responsive.
+    il "amorce la construction du site.
+    Son principe est d'utiliser les classes fournis pour a^ppliquer le css sans toucher aux fichiers css.
+    
+    Par exemple on peut changer la couleur du"text" ou du "bcg" avec les classes "bg-primary" et "text-primary"
+Mais primary peut être changé par un des mots clefs suivants : secondray, info, success, light, dark, warning... -->
+    <header class="container-fluid bg-primary">
+        <!-- La classe container permet d'avoir une div responsive laissant un espace sur ses cotes tant que l'ecran n'est pas trop petit.
+        
+        on peut modifier le padding et la margin avec les classes "p-1" à "p-5" (ou "m" avec le margin)
+    auquel on peut ajouter des precisions comme "pb" pour padding-bottom ou "my" pour margin-top et margin-bottom-->
+        <div class="container p-5">
+            <!-- Certaines classes de boostrap peuvent se voir attribuer un breakpoint "-sm". 
+            Ces breakpoints indique à partir de quelle largeur d'écran l'effet doit être appliqué.
+        celles ci sont en mobile first, aucun breakpoint rend la propriété accessible sur n'importe quelle taille,
+        les breakpoints se déclenchent eux à partir d'une certaine largeur.
+        sm, md, lg, xl, xxl. -->
+            <h1 class="text-md-center text-warning">Apprenons à utiliser bootstrap</h1>
+        </div>
+    </header>
+    <div class="container bg-dark">
+        <!-- Pour rendre les sites responsive, bootstrap utilise un systeme de grille, celle-ci est souvent contenu dans un "container" puis
+        chaque ligne de note grille se trouve dans un "row".
+        La grille Bootstrap est divisé en 12, on va donc utiliser ces valeurs pour indiquer la taille de nos elements.
+        12 étant toutes la largeur 6 la moitié et ainsi de suite -->
+        <div class="row">
+            <!-- Ici j'indique que mon élément prend toute la largeur de la grille par défaut, puis si la taille
+            depasse un certain point, ne prend plus que la moitié et enfin si c'est assez  -->
+            <div class="col-12 col-md-6 col-lg-3 p-2">
+                <article class="bg-light text-dark p-1">
+                    <h2 class="text-center">UN TITRE INCROYABLE</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus tempora vitae sunt amet veritatis exercitationem asperiores, optio suscipit modi incidunt fugiat animi voluptate labore nulla hic nostrum quibusdam alias repellendus ipsa rerum ut quis in similique laborum. Officia molestias ducimus, recusandae dolores officiis laudantium eos ad modi culpa, quo possimus.</p>
+                    <br>
+                    <!-- fst indique le font style fw le font weight fs la fontsize d permet de modifier le display -->
+                    <span class="text-danger fst-italic fw-bold fs-4 d-sm-none">Message secret</span>
+                    <!-- Ici on place l'element en display flex et on applique: justify-content: center; -->
+                    <div class="d-flex justify-content-center">
+                        <!-- On transform notre lien en bouton de couleur verte avec une largeur de 75% -->
+                        <a href="#" class="btn btn-success w-50">Super Bouton</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 p-2">
+                <article class="bg-light text-dark p-1">
+                    <h2 class="text-center">UN TITRE INCROYABLE</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus tempora vitae sunt amet veritatis exercitationem asperiores, optio suscipit modi incidunt fugiat animi voluptate labore nulla hic nostrum quibusdam alias repellendus ipsa rerum ut quis in similique laborum. Officia molestias ducimus, recusandae dolores officiis laudantium eos ad modi culpa, quo possimus.</p>
+                    <br>
+                    <!-- fst indique le font style fw le font weight fs la fontsize d permet de modifier le display -->
+                    <span class="text-danger fst-italic fw-bold fs-4 d-sm-none">Message secret</span>
+                    <!-- Ici on place l'element en display flex et on applique: justify-content: center; -->
+                    <div class="d-flex justify-content-center">
+                        <!-- On transform notre lien en bouton de couleur verte avec une largeur de 75% -->
+                        <a href="#" class="btn btn-success w-50">Super Bouton</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 p-2">
+                <article class="bg-light text-dark p-1">
+                    <h2 class="text-center">UN TITRE INCROYABLE</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus tempora vitae sunt amet veritatis exercitationem asperiores, optio suscipit modi incidunt fugiat animi voluptate labore nulla hic nostrum quibusdam alias repellendus ipsa rerum ut quis in similique laborum. Officia molestias ducimus, recusandae dolores officiis laudantium eos ad modi culpa, quo possimus.</p>
+                    <br>
+                    <!-- fst indique le font style fw le font weight fs la fontsize d permet de modifier le display -->
+                    <span class="text-danger fst-italic fw-bold fs-4 d-sm-none">Message secret</span>
+                    <!-- Ici on place l'element en display flex et on applique: justify-content: center; -->
+                    <div class="d-flex justify-content-center">
+                        <!-- On transform notre lien en bouton de couleur verte avec une largeur de 75% -->
+                        <a href="#" class="btn btn-success w-50">Super Bouton</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 p-2">
+                <article class="bg-light text-dark p-1">
+                    <h2 class="text-center">UN TITRE INCROYABLE</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus tempora vitae sunt amet veritatis exercitationem asperiores, optio suscipit modi incidunt fugiat animi voluptate labore nulla hic nostrum quibusdam alias repellendus ipsa rerum ut quis in similique laborum. Officia molestias ducimus, recusandae dolores officiis laudantium eos ad modi culpa, quo possimus.</p>
+                    <br>
+                    <!-- fst indique le font style fw le font weight fs la fontsize d permet de modifier le display -->
+                    <span class="text-danger fst-italic fw-bold fs-4 d-sm-none">Message secret</span>
+                    <!-- Ici on place l'element en display flex et on applique: justify-content: center; -->
+                    <div class="d-flex justify-content-center">
+                        <!-- On transform notre lien en bouton de couleur verte avec une largeur de 75% -->
+                        <a href="#" class="btn btn-success w-50">Super Bouton</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 p-2">
+                <article class="bg-light text-dark p-1">
+                    <h2 class="text-center">UN TITRE INCROYABLE</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus tempora vitae sunt amet veritatis exercitationem asperiores, optio suscipit modi incidunt fugiat animi voluptate labore nulla hic nostrum quibusdam alias repellendus ipsa rerum ut quis in similique laborum. Officia molestias ducimus, recusandae dolores officiis laudantium eos ad modi culpa, quo possimus.</p>
+                    <br>
+                    <!-- fst indique le font style fw le font weight fs la fontsize d permet de modifier le display -->
+                    <span class="text-danger fst-italic fw-bold fs-4 d-sm-none">Message secret</span>
+                    <!-- Ici on place l'element en display flex et on applique: justify-content: center; -->
+                    <div class="d-flex justify-content-center">
+                        <!-- On transform notre lien en bouton de couleur verte avec une largeur de 75% -->
+                        <a href="#" class="btn btn-success w-50">Super Bouton</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 p-2">
+                <article class="bg-light text-dark p-1">
+                    <h2 class="text-center">UN TITRE INCROYABLE</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus tempora vitae sunt amet veritatis exercitationem asperiores, optio suscipit modi incidunt fugiat animi voluptate labore nulla hic nostrum quibusdam alias repellendus ipsa rerum ut quis in similique laborum. Officia molestias ducimus, recusandae dolores officiis laudantium eos ad modi culpa, quo possimus.</p>
+                    <br>
+                    <!-- fst indique le font style fw le font weight fs la fontsize d permet de modifier le display -->
+                    <span class="text-danger fst-italic fw-bold fs-4 d-sm-none">Message secret</span>
+                    <!-- Ici on place l'element en display flex et on applique: justify-content: center; -->
+                    <div class="d-flex justify-content-center">
+                        <!-- On transform notre lien en bouton de couleur verte avec une largeur de 75% -->
+                        <a href="#" class="btn btn-success w-50">Super Bouton</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 p-2">
+                <article class="bg-light text-dark p-1">
+                    <h2 class="text-center">UN TITRE INCROYABLE</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus tempora vitae sunt amet veritatis exercitationem asperiores, optio suscipit modi incidunt fugiat animi voluptate labore nulla hic nostrum quibusdam alias repellendus ipsa rerum ut quis in similique laborum. Officia molestias ducimus, recusandae dolores officiis laudantium eos ad modi culpa, quo possimus.</p>
+                    <br>
+                    <!-- fst indique le font style fw le font weight fs la fontsize d permet de modifier le display -->
+                    <span class="text-danger fst-italic fw-bold fs-4 d-sm-none">Message secret</span>
+                    <!-- Ici on place l'element en display flex et on applique: justify-content: center; -->
+                    <div class="d-flex justify-content-center">
+                        <!-- On transform notre lien en bouton de couleur verte avec une largeur de 75% -->
+                        <a href="#" class="btn btn-success w-50">Super Bouton</a>
+                    </div>
+                </article>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>

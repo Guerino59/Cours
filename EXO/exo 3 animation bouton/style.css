@@ -1,0 +1,125 @@
+body{
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: grey;
+}
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+button{
+    width: 150px;
+    height: 50px;
+    font-size: 1.5rem;
+}
+.bonjour{
+    background-color: rgba(0, 0, 0, 0.3);
+    border: solid 5px black;
+    font-weight: 700;
+    transition-property: border-color, color, background-color, transform;
+    transition-duration: 0.5s, 0.5s, 0.5s, 1.5s;
+    cursor: pointer;
+}
+.bonjour:hover{
+    background-color: rgba(255, 0, 0, 0.3);
+    border: solid 5px red;
+    color: red;
+    transform: rotateY(360deg);
+    transition-property: border-color, color, background-color
+}
+
+.poire{
+    position: relative;
+    border-radius: 50px;
+    font-size: 20px;
+    background-color: orangered;
+    border: none;
+    cursor: pointer;
+    color: azure;
+    transition: all 0.5s;
+}
+span{
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 1px;
+    margin: 0.3rem;
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+    transition: all 0.5s ease;
+    border-radius: 100%;
+}
+.poire:hover{
+    box-shadow: 0px 0px 0px 2px white inset;
+}
+.poire:hover span{
+    background-color: aliceblue;
+    color: orangered;
+    transform: rotate(360deg);
+    transition: all 0.5s linear;
+}
+
+.signe{
+    position: absolute;
+    border-radius: 10px;
+    border: none;
+    background-color: brown;
+    color: aliceblue;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow:10px 10px 10px rgba(0, 0, 0, 0.6);
+    top:100px;
+    transition: top 0.2s linear;
+    transition: transform 1.5s ease ;
+}
+.signe:hover{
+    top: 102px; 
+    box-shadow:5px 5px 10px rgba(0, 0, 0, 0.6);
+}
+.signe:active{
+    transform: rotateX(360deg);
+}
+.pomme{
+    position: relative;
+    font-size: 20px;
+    border:none;
+    cursor: pointer;
+    color: blueviolet;
+}
+.pomme::before{
+    content:"";
+    display: block;
+    background-color: blueviolet;
+    height: 4px;
+    width: 0px;
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 0px;
+}
+.pomme:hover::before, .pomme:hover::after {
+   width: 150px;
+}
+.pomme:hover{
+    color: black;
+}
+.pomme:active{
+    color: blue;
+}
+.pomme:active::after, .pomme:active::before{
+    background-color: blue;
+}
+.pomme::after{
+    content:"";
+    display: block;
+    background-color: blueviolet;
+    height: 4px;
+    width: 0px;
+    transition: all 0.5s ease;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}

@@ -1,0 +1,71 @@
+*, ::before, ::after{
+    /* On place toute les marges et padding à 0 pour avoir celles par défaut. (optionnelle) */
+   margin: 0;
+   padding: 0;
+   /* On indique que la taille de nos element doit prendre en compte la bordure. sans cela, u element de 50px avec une bordure 10px, fera en verité 70px */
+   box-sizing: border-box;
+}
+header{
+    background-color: aqua;
+    /* Mettre une image en fond */
+    background-image: url(../../ressources/img4.jpg);
+    /* L'empecher de se repeter */
+    background-repeat: no-repeat;
+    /* Positionne l'image */
+    background-position: center;
+    /* choisi sa taille */
+    background-size: cover;
+}
+main{
+    background-color: blueviolet;
+}
+article{
+    /* Modifie la largeur d'un element */
+    width: 49%;
+    /* Change la façon d'afficher un element */
+    display: inline-block;
+    /* Creer une bordure autour de l'element */
+    border: 2px solid black;
+    /* Ajoute une marge interne au block */
+    padding: 20px;
+    /* ajoute une marge externe au block */
+    margin: 20px auto 10px 7px;
+}
+h1{
+    font-size: 42px;
+    text-align: center;
+    padding: 0.8em 0;
+    color: white;
+}
+p{
+    font-size: 24px;
+    text-align: justify;
+}
+p::first-letter{
+    font-size: 2em;
+}
+footer{
+    background-color: chartreuse;
+    min-height: 50px;
+}
+li{
+    display: inline-block;
+    background-color: aqua;
+    /* Permet de modifier la taille d'un element en fonction d'un de ces deux tailles (hauteur ou largeur) */
+    aspect-ratio: 1/1;
+    /* Arrondir les angles */
+    border-radius: 50%;
+    padding: 1.2rem 5px;
+    margin-left: 15%;
+    /* Modifie les puces de la liste */
+    list-style: none;
+}
+div{
+    width: 40vw;
+    max-height: 90vh;
+    margin: 5px auto;
+}
+img{
+    max-width: 90%;
+    object-fit: cover;
+}

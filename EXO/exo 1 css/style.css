@@ -1,0 +1,35 @@
+*, ::before, ::after{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content
+{  
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: linear-gradient(90deg, purple, red);
+}
+.circle{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.circle:nth-child(1){
+    top:45%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.circle:nth-child(2){
+    top:50%;
+    left:47%;
+    transform: translate(-50%, -50%);
+}
+.circle:nth-child(3){
+    top:50%;
+    left:53%;
+    transform: translate(-50%, -50%);
+}

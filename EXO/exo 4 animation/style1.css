@@ -1,0 +1,83 @@
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    background-color: black;
+}
+.circle{
+    border-radius: 50%;
+    border: solid 4px transparent;
+    border-bottom: solid 4px red;
+    background-color: black;
+    animation-name: rotate;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards; 
+} 
+.n1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    width: 350px;
+    animation-duration: 2.2s;
+    
+}
+.n2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 325px;
+    width: 325px;
+    animation-duration: 2.1s;
+    }
+
+.n3{
+    height: 300px;
+    width: 300px;
+    border-bottom: solid 2px pink;
+    animation-duration: 10s;
+    }
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.phrase{
+    position: relative;
+    height: 100vh;
+    width: 600vw;
+    background-color: black;
+    overflow-x: hidden;
+}
+p{
+    position: absolute;
+    top: 50%;
+    color: antiquewhite;
+    font-size: 100px;
+    animation: defile 30s linear infinite ;
+    animation-fill-mode: forwards;
+    
+    
+}
+@keyframes defile {
+    from{
+        left:0px;
+    }
+    to{
+        left:-5900px;
+    }
+    
+}

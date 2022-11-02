@@ -1,0 +1,64 @@
+*, ::before, ::after{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.container{
+background-color: black;
+width: 300px;
+height: 250px;
+display: grid;
+grid-template-columns: repeat(7, 1fr);
+grid-template-rows: repeat(6, 1fr);
+}
+div{
+    display: flex;
+    width: 100%;
+    
+}
+.div7, .div6, .div5, .div4, .div3, .div9, .div10, .div14, .div21, .div28, .div34, .div40, .div39, .div38, .div37, .div36, .div29, .div22, .div15, .div16, .div19, .div18, .div24, .div25, .div27, .div33{
+    background-color: green;
+}
+.split1{
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-top : 45px solid green;
+    border-right : 45px solid transparent;
+   }
+
+.div8, .div2{
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-bottom : 45px solid green;
+    border-left : 45px solid transparent;
+}
+.div10{
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-bottom : 45px solid black;
+    border-left : 45px solid transparent;
+}
+.div35, .div41{
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-top : 45px solid green;
+    border-right : 45px solid transparent;
+}
+.div33{
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-top : 45px solid black;
+    border-right : 45px solid transparent;
+}
