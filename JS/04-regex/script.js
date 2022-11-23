@@ -116,3 +116,41 @@ console.log(phrase3.match(/1.+3/s));
 const r19 = new RegExp("^[A-z]+$", "gi");
 // Attention, de A majuscule à z minuscule, certains caracteres speciaux se cachent :
 console.log(r19, r19.test("Hello_World"));
+
+//----------------------EXO---------------------//
+
+const id = document.getElementById('user');
+console.log(id);
+
+id.addEventListener("input",()=>{
+    if (! /^[a-zA-Z_-]+$/.test(id.value)) {
+        id.style.border = "10px solid red"
+    }else{
+        id.style.border = "10px solid green"
+    }
+});
+
+const tel = document.getElementById('telephone');
+console.log(tel);
+tel.addEventListener("input",()=>{
+        if (!/^(0|\+33)[1-9]( *[0-9]{2}){4}$/.test(tel.value)
+        ) {
+            tel.style.border = "10px solid red"
+        }else{
+            tel.style.border = "10px solid green"
+        }
+    });
+
+const mail = document.getElementById('email');
+console.log(mail);
+
+mail.addEventListener("input",()=>{
+    if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(mail.value)   ) {
+        mail.style.border = "10px solid red"
+    }else{
+            mail.style.border = "10px solid green"
+    }
+});
+    
+
+
