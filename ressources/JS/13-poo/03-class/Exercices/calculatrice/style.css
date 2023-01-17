@@ -1,0 +1,56 @@
+*, ::before, ::after{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    height: 70vh;
+    width: 60vw;
+    background-color: bisque;
+    display: grid;
+    grid-template-areas: 
+    "input input input input"
+    "reset reset del divi"
+    "un deux trois mult"
+    "quatre cinq six plus"
+    "sept huit neuf moins"
+    "point zero eg eg" 
+    ;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(6,1fr);
+}
+.input{
+    grid-area: input;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: end;
+    font-size: 2rem;
+}
+.reset{
+    grid-area: reset;
+}
+.eg{
+    grid-area: eg;
+}
+.container div{
+    position: relative;
+    border: solid 2px black;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+div span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    cursor: pointer;
+}

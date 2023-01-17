@@ -1,0 +1,49 @@
+*, ::before, ::after{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.rect{
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    height: 130px;
+    width: 10px;
+    background-color: black;
+}
+.containerl{
+    position: absolute;
+    width: fit-content;
+    height: 130px;
+    overflow: hidden;
+    transform: translateX(50%);
+}
+.containerr{
+    position: absolute;
+    width: fit-content;
+    height: 130px;
+    overflow: hidden;
+    transform: translateX(-50%);
+}
+span{
+    position: relative;
+    font-size: 5rem;
+    opacity: 0;
+    padding:0 5px;
+}
+.left{
+    left: -100%;
+}
+.right{
+    right: -100%;;
+}
+.l2{
+    opacity: 0;
+}

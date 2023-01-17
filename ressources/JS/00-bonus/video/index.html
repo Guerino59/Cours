@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/6d7cc5bd6b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="vContainer">
+        <video src="./vid.mp4" type="video/mp4"></video>
+        <div class="options">
+            <div class="bar-container">
+                <div class="progress-bar"></div>
+            </div>
+            <i class="stop fa-solid fa-play fa-2x"></i>
+            <i class="fa-solid fa-rotate-right fa-2x"></i>
+            <i class="vol fa-solid fa-volume-low fa-2x"></i>
+            <input type="range" id="volume" name="volume" value="50"
+                min="0" max="1" step="0.1">
+            <i class="full fa-solid fa-expand fa-2x"></i>
+        </div>
+    </div>
+</body>
+</html>

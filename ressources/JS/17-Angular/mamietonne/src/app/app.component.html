@@ -1,0 +1,53 @@
+<h1>Bienvenue sur {{title}}</h1>
+<h2>{{ recetteList[0].steps }}</h2>
+
+<!-- 
+  La propriete entre crochet suivi d'un egale puis de la valeur a lui donner
+ -->
+<a [href]="recetteList[0].name">exemple 1</a>
+
+<!--  De meme avec "attr" puis le nom de lattribut à changer -->
+<a [attr.href]="recetteList[0].name">exemple 2</a>
+
+<!-- Avec le mot class suivi du nom d'une classe, je peux indiquer entre les guillemets une condition que si elle est true
+donnera la classe a notre element html -->
+<div [class.super]="true">exemple 3</div>
+
+<!-- Ici je modifie la propriete css "color" selon une ternaire -->
+<div [style.color]="5>10?'red':'green'">exemple 4</div>
+
+<!-- Quelques interpolation possibles avec angular -->
+
+<!-- Ici on ajoute un evenement au clique qui lance la fonction entre guillemet -->
+<!-- <p (click)="selectRecette(recetteList[0])">{{recetteList[0].name}}</p> -->
+
+<!-- Avec $event on indique que l'on passe notre evenement a la fonction -->
+<!-- <input type="number" (input)="selectRecette($event)"> -->
+<!-- On a ici un evenement à l'input ne lançant aucune fonction puis loa creation d'une variable(propriete)
+qui va contenir notre input
+Et enfin un p qui affiche le contenue de notre imput -->
+<input type="number" #inputRecette (keyup.enter)="selectRecette(inputRecette.value)">
+<p *ngIf="recetteSelected">Vous avez selectionné : {{recetteSelected.name}}</p>
+<p *ngIf="!recetteSelected">Aucune recette selectionée!</p>
+<!-- <p *ngFor="let rec of recetteList" >{{rec.name}}</p> -->
+<div *ngIf="recetteSelected" class="card-container">
+  <h2 *ngIf="recetteSelected">{{recetteSelected.name}}</h2>
+  <div class="img-rec">
+    <img *ngIf="recetteSelected" [src]="'./assets/'+recetteSelected.image" alt="a">
+   
+  </div>
+  <h4 *ngIf="recetteSelected">{{recetteSelected.description}}</h4>
+    <p *ngIf="recetteSelected">{{recetteSelected.duration}} minutes</p>
+    <p *ngIf="recetteSelected">{{recetteSelected.type}}</p>
+  
+  
+  <p *ngIf="recetteSelected">{{recetteSelected.createdAt}}></p>
+
+  
+  
+</div>
+ <!-- <img src="./assets/cannele.jpg" alt="aaa"> -->
+ <nav>
+    <a href="#" class="logo">{{title}}</a>
+ </nav>
+<router-outlet></router-outlet>
