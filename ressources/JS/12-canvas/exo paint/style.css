@@ -1,0 +1,26 @@
+*, ::before, ::after{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+canvas{
+    border: 2px solid black;
+   
+}
+input{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.plus, .moins {
+    position: absolute;
+    padding: 5px;
+}
+.plus{
+    bottom: 10px;
+    left: 90px;
+}
+.moins{
+    bottom: 10px;
+    left: 120px;
+}
