@@ -53,3 +53,12 @@ p{
     align-items: center;
     font-size: clamp(1rem, 20vh, 3rem);
 }
+/* formulaires :*/
+.error{
+    color: red;
+    font-weight: bold;
+}
+.formError
+{
+    border: 2px solid red;
+}
