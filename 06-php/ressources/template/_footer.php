@@ -1,8 +1,7 @@
 
-
 </main>
 <footer>
-    <a href="/">Retourner à l'accueil</a>
+    <a href="/cours">Retourner à l'accueil</a>
 </footer>
 </body>
 </html>

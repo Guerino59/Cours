@@ -1,0 +1,23 @@
+<?php
+const ROUTES = [
+        "06-poo"=>[
+            "controller"=>"UserController.php",
+            "fonction"=>"read"
+        ],
+        "06-poo/inscription"=>[
+            "controller"=>"UserController.php",
+            "fonction"=>"create"
+        ],
+        "06-poo/update"=>[
+            "controller"=>"UserController.php",
+            "fonction"=>"update"
+        ],
+        "06-poo/delete"=>[
+            "controller"=>"UserController.php",
+            "fonction"=>"delete"
+        ],
+        "06-poo/connexion"=>[
+            "controller"=>"UserController.php",
+            "fonction"=>"Connect"
+        ]];
+?>

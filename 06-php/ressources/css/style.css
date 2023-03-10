@@ -1,50 +1,102 @@
 *, ::before, ::after{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
+body
+{
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
 }
-main{
+main
+{
     background-color: beige;
     padding: 1vw;
 }
-main.includeNav{
+/* Sommaire */
+.sommaire
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.sommaire h3
+{
+    margin-bottom: 15px;
+}
+.sommaire > li
+{
+    padding: 20px;
+    list-style: none;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+.sommaire li
+{
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+.sommaire > :nth-child(1)
+{
+    background-color: darkseagreen;
+}
+.sommaire > :nth-child(2)
+{
+    background-color:plum;
+}
+.sommaire > :nth-child(3)
+{
+    background-color:skyblue;
+}
+.sommaire > :nth-child(4)
+{
+    background-color:tomato;
+}
+/* Fin Sommaire */
+/* main.includeNav */
+/* ne fonctionne pas encore sous firefox */
+main:has(nav)
+{
     display: grid;
     grid-template-columns: 100px 1fr;
     padding: 0;
 }
-main.includeNav nav {
+/* main.includeNav nav */
+main nav
+{
     grid-row: 1/-1;
 }
-header{
+header
+{
     background-color: cadetblue;
     text-align: center;
     padding: 1rem;
 }
-nav{
+nav
+{
     background-color: aquamarine;
     position: relative;
     padding: 0.5rem;
-    
 }
-nav ul{
+nav ul
+{
     position: sticky;
     top: 20px;
-    list-style-type: none;
+    list-style: none;
 }
-footer{
+footer
+{
     background-color: rgb(163, 182, 131);
     text-align: center;
     padding: 1rem;
 }
-footer a{
+footer a
+{
     font-size: 2rem;
 }
-p{
+p
+{
     margin: 5rem auto;
     width: 80%;
     display: flex;
@@ -53,10 +105,11 @@ p{
     align-items: center;
     font-size: clamp(1rem, 20vh, 3rem);
 }
-/* formulaires :*/
-.error{
-    color: red;
+/* formulaires : */
+.error
+{
     font-weight: bold;
+    color: red;
 }
 .formError
 {
